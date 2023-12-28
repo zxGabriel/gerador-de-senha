@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de senhas</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho_texto">Gerador de senhas</h1>
+        <h2 class="cabecalho_texto">Utilizando vanilla JS</h2>
+    </header>
+
+    <main class="principal">
+        <section class="senha">
+            <div class="senha_container"> <p class="senha_texto"> </p> </div>
+            <button type="button" class="senha_copiar"> Copiar </button>
+        </section>
+        <section class="opcoes">
+            <p>Número de caracteres</p>
+            <input type="range" value="1" min="1" max="50" class="opcoes_range" id="range" oninput="rangevalue.value=value"/>
+            <input type="number" id="rangevalue" value="1" min = "1" max = "50"  class="opcoes_range_num" oninput="range.value=value">
+            <ul class = "opcoes_lista">
+                <li class="opcoes_lista_item">
+                    <input class="item minusculas" name="lower" type="button" value="Letras minúsculas"> 
+                </li>
+                <li class="opcoes_lista_item">
+                    <input class="item maiusculas" name="upper" type="button" value="Letras maiúsculas"> 
+                </li>
+                <li class="opcoes_lista_item">
+                    <input class="item numeros" name="num" type="button" value="Números"> 
+                </li>
+                <li class="opcoes_lista_item">
+                    <input class="item especiais" name="esp" type="button" value="Caracteres especiais"> 
+                </li>
+                <li class="opcoes_lista_item gerar_senha_item">
+                    <input class="item gerar" name="generate" type="submit" value="Gerar senha"> 
+                </li>
+            </ul>
+            <p class="opcoes_combinacoes">Combinações possíveis: <span class="opcoes_combinacoes_numero"></span></p>
+        </section>
+    </main>
+    <footer class="rodape">
+        <h2 class="rodape_texto">Desenvolvido por <strong><a class="profile-link" target="_blank" href="https://www.instagram.com/gr4sp_/">Gabriel </a></strong></h2>
+    </footer>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
